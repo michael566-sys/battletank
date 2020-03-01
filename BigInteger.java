@@ -71,6 +71,7 @@ public class BigInteger {
 	 * @throws IllegalArgumentException If input is incorrectly formatted
 	 */
 	public static BigInteger parse(String integer) 
+		// @ author Songyuan Zhang
 	throws IllegalArgumentException {
 		if ( integer.equals("") ) { throw new IllegalArgumentException ("Empty string");} 
 		BigInteger a = new BigInteger ();
@@ -212,7 +213,7 @@ public class BigInteger {
 	 * @return Result big integer
 	 */
 	public static BigInteger add(BigInteger first, BigInteger second) {
-//		System.out.println();
+		// @ author Songyuan Zhang
 		
 		DigitNode ptr1 = null;
 		DigitNode ptr2 = null;
@@ -433,6 +434,8 @@ public class BigInteger {
 	 * @return A new BigInteger which is the product of the first and second big integers
 	 */
 	public static BigInteger multiply(BigInteger first, BigInteger second) {
+		// @ author Songyuan Zhang
+
 		BigInteger answer = new BigInteger () ; 
 		BigInteger mult = new BigInteger () ; 
 		if ( (first.front == null) || (second.front == null) ) {
