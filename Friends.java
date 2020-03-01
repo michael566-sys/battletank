@@ -20,6 +20,8 @@ public class Friends {
 	 *         path from p1 to p2
 	 */
 	public static ArrayList<String> shortestChain(Graph g, String p1, String p2) {
+		// @ author Songyuan Zhang
+		
 		ArrayList <String> shortest = new ArrayList <>();
 		String p1a = new String (p1.toLowerCase()) ;  
 		String p2a = new String (p2.toLowerCase()) ; 
@@ -88,6 +90,8 @@ public class Friends {
 	}
 	
 	private static ArrayList <String> add ( int array[], Graph g, String p1, String p2) {
+		// @ author Songyuan Zhang
+
 		ArrayList <String>shortest = new ArrayList <> (); 
 		
 		
@@ -132,6 +136,8 @@ public class Friends {
 	 *         given school
 	 */
 	public static ArrayList<ArrayList<String>> cliques(Graph g, String school) {
+		// @ author Songyuan Zhang
+
 		ArrayList <ArrayList <String>> answer = new ArrayList <>();
 		
 		if (school == null||g == null) {
@@ -216,42 +222,6 @@ public class Friends {
 		
 	}
 	
-//	private static ArrayList <ArrayList<String>>addString ( Stack<Integer> stk, ArrayList <ArrayList<String>>addString , Graph g, String school ) {
-//		ArrayList <ArrayList<String>>addStr1 = addString; 
-//		
-////		int index = 0 ; 
-////		for ( int i = 0  ; i < addStr1.size(); i ++ ) {
-////			if ( addStr1.get(i).isEmpty() ) { 
-////				index = i ; 
-////				break ;
-////			}
-////		}
-//		ArrayList <String> b = new ArrayList <String> () ; 
-//
-//		while (!stk.isEmpty() ) {
-//			
-//			int n = stk.pop();  
-//			b.add( g.members[n].name ) ; 			
-//		}
-//		
-//		addStr1.add(b) ; 
-//		
-//		return addStr1; 
-//	}
-	
-//	private static boolean isConnected ( int a, int b, Graph g, String school ) {
-//		
-//		for ( Friend j = g.members[a].first ; j != null ; j = j.next ) {
-//			
-//			int num = j.fnum; 
-//			
-//			if ( num == b ) { 
-//				return true; 
-//			}
-//			
-//		}
-//		return false; 
-//	}
 	
 	/**
 	 * Finds and returns all connectors in the graph.
@@ -260,6 +230,8 @@ public class Friends {
 	 * @return Names of all connectors. Null if there are no connectors.
 	 */
 	public static ArrayList<String> connectors(Graph g) {
+		// @ author Songyuan Zhang
+
 		ArrayList<String> answer = new ArrayList<> () ; 
 		if (g == null) {
 			return answer; 
@@ -286,26 +258,7 @@ public class Friends {
 			
 		}
 		
-//		for ( int i = 0 ; i < answer.size () ; i++ ) {
-//			Friend e = g.members [i].first;
-//			System.out.println(  "Check name :" + g.members [i].name );
-//			int count = 0 ; 
-//			while (e!=null) {
-//				e = e.next; 
-//				count ++ ; 
-//			}
-//			if ( count == 1 ) {
-//				answer.remove(i) ; 
-//			}
-//			
-//		}
-//		
-//		for ( int i = 0 ; i < answer.size () ; i++ ) {
-//			Friend e = g.members [i].first;
-//			if (  g.members [i].first.next == null && !answer.contains( g.members[g.members[i].first.fnum].name)) {
-//				answer.add(g.members[g.members[i].first.fnum].name) ; 
-//			}
-//		}
+
 		return answer; 
 		
 
@@ -325,6 +278,8 @@ public class Friends {
 		return num; 
 	}
 	private static ArrayList<String> dfs ( int v, int count1 , int count2, int []dfsnum , int []back  ,boolean [] visited, Graph g , ArrayList<String> answer ) {
+		// @ author Songyuan Zhang
+
 		String a = new String () ;
 //		ArrayList <String> b = new ArrayList<>() ;
 		count1 = visitednumber ( visited ); 
@@ -412,7 +367,8 @@ public class Friends {
 		return answer ; 
 	}
 	private static boolean onlyNbr ( int v, int fnum, Graph g ) {
-		
+		// @ author Songyuan Zhang
+
 		int count = 0 ; 
 		for ( Friend i = g.members[v].first ; i!=null ; i = i.next ) {
 			count ++ ;
@@ -424,6 +380,8 @@ public class Friends {
 		return false; 
 	}
 	private static boolean checknoneone ( int v , Graph g ) {
+		// @ author Songyuan Zhang
+
 		int count = 0 ; 
 		for ( Friend e = g.members [v].first ; 
 				e!= null ; 
@@ -437,6 +395,8 @@ public class Friends {
 		return false; 
 	}
 	private static boolean checkdup ( ArrayList<String> a , String name ) {
+		// @ author Songyuan Zhang
+
 		for ( int i = 0 ; i < a.size() ; i ++ ) {
 			if ( a.get(i).toLowerCase().equals(name.toLowerCase()) ) { 
 				return true ; 
