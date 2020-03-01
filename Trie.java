@@ -23,10 +23,7 @@ public class Trie {
 	 */
 	public static TrieNode buildTrie(String[] allWords) {
 		/** COMPLETE THIS METHOD **/
-		
-		// FOLLOWING LINE IS A PLACEHOLDER TO ENSURE COMPILATION
-		// MODIFY IT AS NEEDED FOR YOUR IMPLEMENTATION
-		// return null;
+		// @author Songyuan Zhang
 		
 		TrieNode root = new TrieNode ( /*new Indexes (0, new Integer(0).shortValue(), new Integer(0).shortValue())*/ 
 							null , null, null  ) ; 
@@ -249,7 +246,7 @@ public class Trie {
 	 */
 	public static ArrayList<TrieNode> completionList(TrieNode root,
 										String[] allWords, String prefix) {
-		
+		// @author Songyuan Zhang
 	
 		if (root == null) { return null; } 
 		
@@ -361,6 +358,7 @@ public class Trie {
 		return a; 
 	}
 	private static String commonStr ( String prefix, String nodeStr ) {
+		// @author Songyuan Zhang
 		String ss = new String () ; 
 		String sl = new String () ; 
 		if ( prefix.length() < nodeStr.length () ) {
@@ -386,6 +384,7 @@ public class Trie {
 		return newsub; 
 	}
 	private static boolean compare( String prefix, String nodeStr ) {
+		// @author Songyuan Zhang
 		String ss = new String () ; 
 		String sl = new String () ; 
 		if ( prefix.length() < nodeStr.length () ) {
